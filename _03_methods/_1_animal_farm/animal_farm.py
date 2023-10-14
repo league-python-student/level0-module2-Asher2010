@@ -13,13 +13,26 @@ def animals():
 
     # TODO 1. Ask the user which animal they want, then see and
     #  hear the animal they chose using one of the methods below.
-
+    animal = simpledialog.askstring(title="Question", prompt="What animal do you want?")
+    for i in range(50):
+        if animal == "cat":
+            meow()
+        if animal == "cow":
+            moo()
+        if animal == "dog":
+            woof()
+        if animal == "duck":
+            quack()
+        if animal == "llama":
+            llama_scream()
     # TODO 2. Make it so that the user can keep entering new animals.
 
     # TODO 3. If the user enters 'exit', stop the program
-
+        if animal == "exit":
+            exit(0)
 
 # ======================= DO NOT EDIT THE CODE BELOW =========================
+
 
 def show_image(filename=None):
     try:

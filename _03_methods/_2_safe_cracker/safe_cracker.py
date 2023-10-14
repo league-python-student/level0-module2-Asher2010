@@ -5,9 +5,13 @@ from playsound import playsound
 
 
 def crack_the_safe():
+    for i in range(1000000):
+
+        try_code(i)
     pass
     # TODO: Your mission: Use the try_code method to crack the safe
     #  by trying all possible combinations
+
 
 
 # ======================= DO NOT EDIT THE CODE BELOW =========================
@@ -21,6 +25,7 @@ def try_code(guess):
     secret_code = 999999 - wekncrzpasfdkjhcfjse
 
     if guess == secret_code:
+        print("Code Found")
         messagebox.showinfo(None, "Congratulations! You cracked the safe with " + str(guess))
         play_the_sound_of_success()
         sys.exit(0)
